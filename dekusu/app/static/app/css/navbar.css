@@ -1,0 +1,104 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0.5%;
+    background: linear-gradient(90deg, rgba(19,44,111,1) 42%, rgba(210,217,240,1) 91%);
+    height: 40px;
+    border-radius: 1000px;
+    margin: 20px;
+}
+
+/* Fonts */
+.titillium-web-bold {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.lora-FONT {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+a {
+    font-family: "Titillium Web", sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+.nav_contents{
+    list-style: none;
+}
+
+.nav_contents li{
+    display: inline-block;
+    padding: 0px 3px;
+}
+
+.nav_contents li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_contents li a:hover {
+    background-color: #97C4EF;
+}
+
+a{
+    background-color: #5094D7;
+    border-radius: 20px;
+    padding: 8px 16px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav_contents li a.active {
+    background-color: #0B6FD1;
+    box-shadow: 4px 4px 7px -5px rgba(0,0,0,0.75) inset;
+    -webkit-box-shadow: 4px 4px 7px -5px rgba(0,0,0,0.75) inset;
+    -moz-box-shadow: 4px 4px 7px -5px rgba(0,0,0,0.75) inset;
+    transition: all 0.3s ease-in-out;
+}
+.nav_contents svg{
+    margin: -5px;
+    margin-right: 1px;
+}
+
+@media (max-width: 480px) {
+    .nav_contents li{
+        display: inline-block;
+        padding: 0px 0px;
+        font-size: 10px;
+    }
+    a{
+        background-color: #5094D7;
+        border-radius: 20px;
+        padding: 9px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 30px;
+        margin-top: 2px
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 21px 1%;
+        background: linear-gradient(90deg, rgba(19,44,111,1) 42%, rgba(210,217,240,1) 91%);
+        height: 1px;
+        border-radius: 1000px;
+        margin: 20px;
+        width: 90%;
+    }
+    .nav_contents svg{
+        margin: -7px;
+        margin-right: 1px;
+        width: 15px;
+    }
+
+}

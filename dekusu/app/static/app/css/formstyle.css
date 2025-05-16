@@ -1,0 +1,210 @@
+/* Continue Button */
+.continue{
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: #293891;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+.continue:hover {
+    background-color: #212c6e;
+  }
+
+/* Close button */
+.close-btn {
+    font-size: 24px;
+    color: black;
+    float: right;
+    cursor: pointer;
+}
+
+/* Overlay styles */
+.overlay {
+      display: none;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(5px);
+      justify-content: center;
+      align-items: center;
+  }
+.overlay-content {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      width: 500px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      transform: scale(0.8);
+      text-align: center;
+}
+.overlay-content.show {
+    transform: scale(1);
+}
+
+/* Visitor Form text */
+.formlabel{
+    text-align: center;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 1.2rem;
+}
+.formheader{
+    font-family: "Titillium Web", sans-serif;
+    font-size: 2.3rem;
+    text-align: center;
+}
+
+.overlay.show {
+    display: flex;
+    opacity: 1;
+}
+
+
+/* Select Form Styles */
+select,::picker(select) {
+    appearance: base-select;
+}
+select {
+    border: 2px solid #6e6e6eab;
+    margin-bottom: 50px;
+    background: white;
+    padding: 10px;
+    width: 13rem;
+    transition: 0.5s;
+    position: relative;
+    appearance: none;
+}
+select:hover,select:focus {
+  background: #e2dddd;
+}
+option::checkmark {
+    display: none;
+}
+select::picker-icon{
+    color: #5c5c5c;
+}
+
+/* Darkmode*/
+.dark-mode .continue{
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: #F6D784;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+.dark-mode .continue:hover {
+    background-color: #fae5ac;
+  }
+
+/* Close button */
+.dark-mode .close-btn {
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    float: right;
+    cursor: pointer;
+}
+
+/* Overlay styles */
+.dark-mode .overlay {
+      display: none;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(5px);
+      justify-content: center;
+      align-items: center;
+  }
+.dark-mode .overlay-content {
+      background: rgb(83, 83, 83);
+      padding: 30px;
+      border-radius: 10px;
+      width: 500px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      transform: scale(0.8);
+      text-align: center;
+}
+.dark-mode .overlay-content.show {
+    transform: scale(1);
+}
+
+/* Visitor Form text */
+.dark-mode .formlabel{
+    text-align: center;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 1.2rem;
+}
+.dark-mode .formheader{
+    font-family: "Titillium Web", sans-serif;
+    font-size: 2.3rem;
+    text-align: center;
+}
+
+.dark-mode .overlay.show {
+    display: flex;
+    opacity: 1;
+}
+
+
+/* Select Form Styles */
+.dark-mode select,::picker(select) {
+    appearance: base-select;
+}
+.dark-mode select {
+    border: 2px solid #6e6e6eab;
+    margin-bottom: 50px;
+    background: white;
+    padding: 10px;
+    width: 13rem;
+    transition: 0.5s;
+    position: relative;
+    appearance: none;
+}
+.dark-mode select:hover,select:focus {
+  background: #e2dddd;
+}
+.dark-mode option::checkmark {
+    display: none;
+}
+.dark-mode select::picker-icon{
+    color: #5c5c5c;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.form-footer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}

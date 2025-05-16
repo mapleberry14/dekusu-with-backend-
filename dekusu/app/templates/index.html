@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADNU DEKUSU - Login</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'app/css/signupdekusu.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/formstyle.css' %}">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+</head>  
+
+<body>
+    <div class="container">
+        <div class="left-section">
+            <img src="{% static 'app/images/dekusu logo.png' %}" alt="ADNU_Logo" class="logo" id="Logo">
+        </div>
+
+        <div class="right-section">
+            <div class="login-box">
+                <h2 class="Login">LOGIN</h2>
+                
+                <form method="post" action="{% url 'index' %}">
+                    {% csrf_token %}
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="ignatius@gbox.adnu.edu.ph" required>
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="password" required>
+
+                    <button type="submit" class="btn">Sign In</button>
+
+                    <div class="form-footer">
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                        <a href="#" class="visitor" id="visitor">Visitor</a>
+                    </div>
+
+                    {% if form.errors %}
+                    <div class="error-message">
+                        Invalid email or password
+                    </div>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+
+        <button id="darkModeToggle" class="dark-mode-btn">☀</button>
+    </div>
+
+    <div id="visitorModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="closeVisitorModal">&times;</span>
+        <h2>Visitor Access</h2>
+        <form id="visitorform">
+            <label for="Purpose">Purpose:</label>
+            <select id="Purpose" required>
+                <option value="">Select purpose</option>
+                <option value="1">Paying</option>
+                <option value="2">Inquiring</option>
+                <option value="3">Applying</option>
+                <option value="3">Other</option>
+            </select>
+            <button class="btn" type="submit">Continue as Guest</button>
+        </form>
+    </div>
+</div>
+
+    <!-- JavaScript -->
+    <script src="{% static 'app/js/signupdekusu.js' %}"></script>
+</body>
+</html>
